@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.1">
+  <zoom_level>8</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>880</x>
+      <y>40</y>
+      <w>112</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>Location
+--
+Cinema
+City
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>72</x>
+      <y>0</y>
+      <w>384</w>
+      <h>440</h>
+    </coordinates>
+    <panel_attributes>Views(UI Layer)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>488</x>
+      <y>0</y>
+      <w>336</w>
+      <h>440</h>
+    </coordinates>
+    <panel_attributes>ViewModels(Application Layer)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>864</x>
+      <y>0</y>
+      <w>312</w>
+      <h>440</h>
+    </coordinates>
+    <panel_attributes>Models(Domain Layer)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>488</x>
+      <y>480</y>
+      <w>336</w>
+      <h>256</h>
+    </coordinates>
+    <panel_attributes>Persistence Layer</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>880</x>
+      <y>288</y>
+      <w>112</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>Booking
+--
+Location
+Movie
+Playtime
+CustomerInformation
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>880</x>
+      <y>144</y>
+      <w>112</w>
+      <h>112</h>
+    </coordinates>
+    <panel_attributes>Movie
+--
+Title
+Genre
+Duration
+Director
+PremiereDate
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1024</x>
+      <y>144</y>
+      <w>112</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>Playtime
+--
+DateTime
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1024</x>
+      <y>40</y>
+      <w>112</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>CustomerInformation
+--
+Email
+PhoneNumber
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>616</x>
+      <y>512</y>
+      <w>152</w>
+      <h>112</h>
+    </coordinates>
+    <panel_attributes>BookingRepository
+--
+- bookings : List&lt;Booking&gt;
+--
++ Add(booking : Booking)
++ Delete(booking : Booking)
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>536</x>
+      <y>200</y>
+      <w>144</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>BookingViewModel
+--
+- 
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>264</x>
+      <y>64</y>
+      <w>144</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>MainWindow
+--
+- mvm : MainViewModel
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>264</x>
+      <y>192</y>
+      <w>144</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>BookingDialog
+--
+- bvm : BookingViewModel
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>608</x>
+      <y>64</y>
+      <w>144</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>MainViewModel
+--
+- repo : BookingRepository
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>400</x>
+      <y>232</y>
+      <w>152</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>170.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>400</x>
+      <y>96</y>
+      <w>224</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>260.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>328</x>
+      <y>128</y>
+      <w>56</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+fg=red
+&lt;&lt;uses&gt;&gt;</panel_attributes>
+    <additional_attributes>10.0;80.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>816</x>
+      <y>616</y>
+      <w>200</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.
+fg=red
+&lt;&lt;uses&gt;&gt;</panel_attributes>
+    <additional_attributes>230.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1000</x>
+      <y>616</y>
+      <w>80</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>TheMovies.csv</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>760</x>
+      <y>328</y>
+      <w>136</w>
+      <h>232</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>150.0;10.0;110.0;10.0;110.0;270.0;10.0;270.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>688</x>
+      <y>152</y>
+      <w>24</w>
+      <h>376</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;450.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>184</x>
+      <y>32</y>
+      <w>248</w>
+      <h>320</h>
+    </coordinates>
+    <panel_attributes>Code Behind</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
