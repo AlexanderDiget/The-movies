@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <diagram program="umlet" version="15.1">
-  <zoom_level>8</zoom_level>
+  <zoom_level>9</zoom_level>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>880</x>
-      <y>40</y>
-      <w>112</w>
-      <h>72</h>
+      <x>909</x>
+      <y>45</y>
+      <w>126</w>
+      <h>81</h>
     </coordinates>
     <panel_attributes>Location
 --
-Cinema
-City
+- cinema : string
+- city : string
 --
 </panel_attributes>
     <additional_attributes/>
@@ -20,10 +20,10 @@ City
   <element>
     <id>UMLPackage</id>
     <coordinates>
-      <x>72</x>
+      <x>0</x>
       <y>0</y>
-      <w>384</w>
-      <h>440</h>
+      <w>432</w>
+      <h>495</h>
     </coordinates>
     <panel_attributes>Views(UI Layer)</panel_attributes>
     <additional_attributes/>
@@ -31,10 +31,10 @@ City
   <element>
     <id>UMLPackage</id>
     <coordinates>
-      <x>488</x>
+      <x>468</x>
       <y>0</y>
-      <w>336</w>
-      <h>440</h>
+      <w>378</w>
+      <h>495</h>
     </coordinates>
     <panel_attributes>ViewModels(Application Layer)</panel_attributes>
     <additional_attributes/>
@@ -42,10 +42,10 @@ City
   <element>
     <id>UMLPackage</id>
     <coordinates>
-      <x>864</x>
+      <x>891</x>
       <y>0</y>
-      <w>312</w>
-      <h>440</h>
+      <w>351</w>
+      <h>495</h>
     </coordinates>
     <panel_attributes>Models(Domain Layer)</panel_attributes>
     <additional_attributes/>
@@ -53,10 +53,10 @@ City
   <element>
     <id>UMLPackage</id>
     <coordinates>
-      <x>488</x>
-      <y>480</y>
-      <w>336</w>
-      <h>256</h>
+      <x>468</x>
+      <y>540</y>
+      <w>378</w>
+      <h>288</h>
     </coordinates>
     <panel_attributes>Persistence Layer</panel_attributes>
     <additional_attributes/>
@@ -64,17 +64,17 @@ City
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>880</x>
-      <y>288</y>
-      <w>112</w>
-      <h>96</h>
+      <x>909</x>
+      <y>324</y>
+      <w>261</w>
+      <h>108</h>
     </coordinates>
     <panel_attributes>Booking
 --
-Location
-Movie
-Playtime
-CustomerInformation
+- location : Location
+- movie : Movie
+- playtime : Playtime
+- customerInformation : CustomerInformation
 --
 </panel_attributes>
     <additional_attributes/>
@@ -82,18 +82,18 @@ CustomerInformation
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>880</x>
-      <y>144</y>
-      <w>112</w>
-      <h>112</h>
+      <x>909</x>
+      <y>162</y>
+      <w>162</w>
+      <h>126</h>
     </coordinates>
     <panel_attributes>Movie
 --
-Title
-Genre
-Duration
-Director
-PremiereDate
+- title : string
+- genre : string
+- durationInMinutes : int
+- director : string
+- premiereDate : DateTime
 --
 </panel_attributes>
     <additional_attributes/>
@@ -101,14 +101,14 @@ PremiereDate
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1024</x>
-      <y>144</y>
-      <w>112</w>
-      <h>96</h>
+      <x>1089</x>
+      <y>198</y>
+      <w>135</w>
+      <h>54</h>
     </coordinates>
     <panel_attributes>Playtime
 --
-DateTime
+- dateTime : DateTime
 --
 </panel_attributes>
     <additional_attributes/>
@@ -116,15 +116,15 @@ DateTime
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1024</x>
-      <y>40</y>
-      <w>112</w>
-      <h>72</h>
+      <x>1071</x>
+      <y>45</y>
+      <w>126</w>
+      <h>81</h>
     </coordinates>
     <panel_attributes>CustomerInformation
 --
-Email
-PhoneNumber
+- email : string
+- phoneNumber : string
 --
 </panel_attributes>
     <additional_attributes/>
@@ -132,10 +132,10 @@ PhoneNumber
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>616</x>
-      <y>512</y>
-      <w>152</w>
-      <h>112</h>
+      <x>612</x>
+      <y>576</y>
+      <w>171</w>
+      <h>126</h>
     </coordinates>
     <panel_attributes>BookingRepository
 --
@@ -149,10 +149,10 @@ PhoneNumber
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>536</x>
-      <y>200</y>
-      <w>144</w>
-      <h>104</h>
+      <x>522</x>
+      <y>225</y>
+      <w>162</w>
+      <h>117</h>
     </coordinates>
     <panel_attributes>BookingViewModel
 --
@@ -164,10 +164,10 @@ PhoneNumber
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>264</x>
-      <y>64</y>
-      <w>144</w>
-      <h>72</h>
+      <x>216</x>
+      <y>72</y>
+      <w>162</w>
+      <h>81</h>
     </coordinates>
     <panel_attributes>MainWindow
 --
@@ -179,10 +179,10 @@ PhoneNumber
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>264</x>
-      <y>192</y>
-      <w>144</w>
-      <h>104</h>
+      <x>216</x>
+      <y>216</y>
+      <w>162</w>
+      <h>117</h>
     </coordinates>
     <panel_attributes>BookingDialog
 --
@@ -194,10 +194,10 @@ PhoneNumber
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>608</x>
-      <y>64</y>
-      <w>144</w>
-      <h>96</h>
+      <x>603</x>
+      <y>72</y>
+      <w>162</w>
+      <h>108</h>
     </coordinates>
     <panel_attributes>MainViewModel
 --
@@ -209,10 +209,10 @@ PhoneNumber
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>400</x>
-      <y>232</y>
-      <w>152</w>
-      <h>24</h>
+      <x>369</x>
+      <y>261</y>
+      <w>171</w>
+      <h>27</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
     <additional_attributes>170.0;10.0;10.0;10.0</additional_attributes>
@@ -220,10 +220,10 @@ PhoneNumber
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>400</x>
-      <y>96</y>
-      <w>224</w>
-      <h>24</h>
+      <x>369</x>
+      <y>108</y>
+      <w>252</w>
+      <h>27</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
     <additional_attributes>260.0;10.0;10.0;10.0</additional_attributes>
@@ -231,10 +231,10 @@ PhoneNumber
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>328</x>
-      <y>128</y>
-      <w>56</w>
-      <h>80</h>
+      <x>288</x>
+      <y>144</y>
+      <w>63</w>
+      <h>90</h>
     </coordinates>
     <panel_attributes>lt=&lt;.
 fg=red
@@ -244,10 +244,10 @@ fg=red
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>816</x>
-      <y>616</y>
-      <w>200</w>
-      <h>32</h>
+      <x>837</x>
+      <y>693</y>
+      <w>225</w>
+      <h>36</h>
     </coordinates>
     <panel_attributes>lt=&lt;.
 fg=red
@@ -257,10 +257,10 @@ fg=red
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1000</x>
-      <y>616</y>
-      <w>80</w>
-      <h>32</h>
+      <x>1044</x>
+      <y>693</y>
+      <w>90</w>
+      <h>36</h>
     </coordinates>
     <panel_attributes>TheMovies.csv</panel_attributes>
     <additional_attributes/>
@@ -268,10 +268,10 @@ fg=red
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>760</x>
-      <y>328</y>
-      <w>136</w>
-      <h>232</h>
+      <x>774</x>
+      <y>369</y>
+      <w>153</w>
+      <h>261</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
     <additional_attributes>150.0;10.0;110.0;10.0;110.0;270.0;10.0;270.0</additional_attributes>
@@ -279,10 +279,10 @@ fg=red
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>688</x>
-      <y>152</y>
-      <w>24</w>
-      <h>376</h>
+      <x>693</x>
+      <y>171</y>
+      <w>27</w>
+      <h>423</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
     <additional_attributes>10.0;450.0;10.0;10.0</additional_attributes>
@@ -290,10 +290,10 @@ fg=red
   <element>
     <id>UMLPackage</id>
     <coordinates>
-      <x>184</x>
-      <y>32</y>
-      <w>248</w>
-      <h>320</h>
+      <x>126</x>
+      <y>36</y>
+      <w>279</w>
+      <h>360</h>
     </coordinates>
     <panel_attributes>Code Behind</panel_attributes>
     <additional_attributes/>
