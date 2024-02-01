@@ -10,7 +10,7 @@ namespace TheMovies.Models
     {
         private Location location {  get; set; }
         private Movie movie { get; set; }
-        private Playtime playtime { get; set; }
+        private Screening playtime { get; set; }
         private CustomerInformation customerInformation { get; set; }
     }
 }
