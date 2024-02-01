@@ -6,7 +6,14 @@ using System.Threading.Tasks;
 
 namespace TheMovies.Models
 {
-    class Movie
+   public class Movie
     {
+        private string title { get; set; }
+        private string genre { get; set; }
+        private int durationInMinutes { get; set; }
+        private string director { get; set; }
+        private DateTime premiereDate { get; set; }
+
+
     }
 }
