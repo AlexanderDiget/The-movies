@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <diagram program="umlet" version="15.1">
-  <zoom_level>9</zoom_level>
+  <zoom_level>6</zoom_level>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>171</x>
-      <y>234</y>
-      <w>90</w>
-      <h>27</h>
+      <x>114</x>
+      <y>240</y>
+      <w>60</w>
+      <h>18</h>
     </coordinates>
     <panel_attributes>: MainWindow</panel_attributes>
     <additional_attributes/>
@@ -15,10 +15,10 @@
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>207</x>
+      <x>138</x>
       <y>252</y>
-      <w>27</w>
-      <h>63</h>
+      <w>18</w>
+      <h>42</h>
     </coordinates>
     <panel_attributes>lt=.</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;50.0</additional_attributes>
@@ -26,10 +26,10 @@
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>207</x>
-      <y>297</y>
-      <w>18</w>
-      <h>189</h>
+      <x>138</x>
+      <y>282</y>
+      <w>12</w>
+      <h>126</h>
     </coordinates>
     <panel_attributes/>
     <additional_attributes/>
@@ -37,10 +37,10 @@
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>207</x>
-      <y>477</y>
-      <w>27</w>
-      <h>63</h>
+      <x>138</x>
+      <y>402</y>
+      <w>18</w>
+      <h>42</h>
     </coordinates>
     <panel_attributes>lt=.</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;50.0</additional_attributes>
@@ -48,10 +48,10 @@
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>9</x>
-      <y>288</y>
-      <w>216</w>
-      <h>27</h>
+      <x>6</x>
+      <y>276</y>
+      <w>144</w>
+      <h>18</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
     <additional_attributes>220.0;10.0;10.0;10.0</additional_attributes>
@@ -60,9 +60,9 @@
     <id>UMLSpecialState</id>
     <coordinates>
       <x>0</x>
-      <y>288</y>
-      <w>18</w>
-      <h>18</h>
+      <y>276</y>
+      <w>12</w>
+      <h>12</h>
     </coordinates>
     <panel_attributes>type=initial</panel_attributes>
     <additional_attributes/>
@@ -70,10 +70,10 @@
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>459</x>
-      <y>243</y>
-      <w>108</w>
-      <h>27</h>
+      <x>306</x>
+      <y>246</y>
+      <w>72</w>
+      <h>18</h>
     </coordinates>
     <panel_attributes>: MainViewModel</panel_attributes>
     <additional_attributes/>
@@ -81,10 +81,10 @@
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>504</x>
-      <y>324</y>
-      <w>18</w>
-      <h>153</h>
+      <x>336</x>
+      <y>300</y>
+      <w>12</w>
+      <h>102</h>
     </coordinates>
     <panel_attributes/>
     <additional_attributes/>
@@ -92,10 +92,10 @@
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>504</x>
-      <y>468</y>
-      <w>27</w>
-      <h>63</h>
+      <x>336</x>
+      <y>396</y>
+      <w>18</w>
+      <h>42</h>
     </coordinates>
     <panel_attributes>lt=.</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;50.0</additional_attributes>
@@ -103,10 +103,10 @@
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>216</x>
-      <y>324</y>
-      <w>306</w>
-      <h>36</h>
+      <x>144</x>
+      <y>300</y>
+      <w>204</w>
+      <h>24</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;-
 */Databinding/*</panel_attributes>
@@ -115,10 +115,10 @@
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>819</x>
-      <y>261</y>
-      <w>126</w>
-      <h>27</h>
+      <x>546</x>
+      <y>258</y>
+      <w>84</w>
+      <h>18</h>
     </coordinates>
     <panel_attributes>: BookingViewModel</panel_attributes>
     <additional_attributes/>
@@ -126,10 +126,10 @@
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>873</x>
-      <y>279</y>
-      <w>27</w>
-      <h>81</h>
+      <x>582</x>
+      <y>270</y>
+      <w>18</w>
+      <h>54</h>
     </coordinates>
     <panel_attributes>lt=.</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;70.0</additional_attributes>
@@ -137,10 +137,10 @@
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>873</x>
-      <y>342</y>
-      <w>18</w>
-      <h>126</h>
+      <x>582</x>
+      <y>312</y>
+      <w>12</w>
+      <h>84</h>
     </coordinates>
     <panel_attributes/>
     <additional_attributes/>
@@ -148,10 +148,10 @@
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>873</x>
-      <y>459</y>
-      <w>27</w>
-      <h>72</h>
+      <x>582</x>
+      <y>390</y>
+      <w>18</w>
+      <h>48</h>
     </coordinates>
     <panel_attributes>lt=.</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;60.0</additional_attributes>
@@ -159,10 +159,10 @@
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>513</x>
-      <y>369</y>
-      <w>378</w>
-      <h>36</h>
+      <x>342</x>
+      <y>330</y>
+      <w>252</w>
+      <h>24</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;-
 &lt;&lt;constructor&gt;&gt; MainViewModel(BookingRepo.GetAll())</panel_attributes>
@@ -171,10 +171,10 @@
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>1836</x>
-      <y>324</y>
-      <w>117</w>
-      <h>27</h>
+      <x>1224</x>
+      <y>300</y>
+      <w>78</w>
+      <h>18</h>
     </coordinates>
     <panel_attributes>: Booking</panel_attributes>
     <additional_attributes/>
@@ -182,10 +182,10 @@
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>1890</x>
-      <y>405</y>
-      <w>18</w>
-      <h>45</h>
+      <x>1260</x>
+      <y>354</y>
+      <w>12</w>
+      <h>30</h>
     </coordinates>
     <panel_attributes/>
     <additional_attributes/>
@@ -193,10 +193,10 @@
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1890</x>
-      <y>441</y>
-      <w>27</w>
-      <h>72</h>
+      <x>1260</x>
+      <y>378</y>
+      <w>18</w>
+      <h>48</h>
     </coordinates>
     <panel_attributes>lt=.</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;60.0</additional_attributes>
@@ -204,10 +204,10 @@
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1890</x>
-      <y>342</y>
-      <w>27</w>
-      <h>81</h>
+      <x>1260</x>
+      <y>312</y>
+      <w>18</w>
+      <h>54</h>
     </coordinates>
     <panel_attributes>lt=.</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;70.0</additional_attributes>
@@ -215,22 +215,22 @@
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1206</x>
-      <y>396</y>
-      <w>702</w>
-      <h>36</h>
+      <x>804</x>
+      <y>348</y>
+      <w>468</w>
+      <h>24</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;-
-&lt;&lt;constructor&gt;&gt; BookingViewModel(Location location, Movie movie, Playtime playtime, CustomerInformation customerInfo)</panel_attributes>
+&lt;&lt;constructor&gt;&gt; Booking(Location location, Movie movie, Playtime playtime, CustomerInformation customerInfo)</panel_attributes>
     <additional_attributes>760.0;20.0;10.0;20.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>513</x>
-      <y>405</y>
-      <w>378</w>
-      <h>36</h>
+      <x>342</x>
+      <y>354</y>
+      <w>252</w>
+      <h>24</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;.
 BookingVM : ObservableCollection&lt;BookingViewModel&gt;()</panel_attributes>
@@ -239,22 +239,22 @@ BookingVM : ObservableCollection&lt;BookingViewModel&gt;()</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1206</x>
-      <y>423</y>
-      <w>702</w>
-      <h>36</h>
+      <x>804</x>
+      <y>366</y>
+      <w>468</w>
+      <h>24</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;.
-&lt;&lt;create&gt;&gt; Booking booking</panel_attributes>
+List&lt;Booking&gt; bookings</panel_attributes>
     <additional_attributes>10.0;20.0;760.0;20.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>504</x>
-      <y>261</y>
-      <w>27</w>
-      <h>81</h>
+      <x>336</x>
+      <y>258</y>
+      <w>18</w>
+      <h>54</h>
     </coordinates>
     <panel_attributes>lt=.</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;70.0</additional_attributes>
@@ -262,10 +262,10 @@ BookingVM : ObservableCollection&lt;BookingViewModel&gt;()</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>1143</x>
-      <y>297</y>
-      <w>126</w>
-      <h>27</h>
+      <x>762</x>
+      <y>282</y>
+      <w>84</w>
+      <h>18</h>
     </coordinates>
     <panel_attributes>: BookingRepository</panel_attributes>
     <additional_attributes/>
@@ -273,10 +273,10 @@ BookingVM : ObservableCollection&lt;BookingViewModel&gt;()</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1197</x>
-      <y>315</y>
-      <w>27</w>
-      <h>81</h>
+      <x>798</x>
+      <y>294</y>
+      <w>18</w>
+      <h>54</h>
     </coordinates>
     <panel_attributes>lt=.</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;70.0</additional_attributes>
@@ -284,10 +284,10 @@ BookingVM : ObservableCollection&lt;BookingViewModel&gt;()</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>1197</x>
-      <y>378</y>
-      <w>18</w>
-      <h>126</h>
+      <x>798</x>
+      <y>336</y>
+      <w>12</w>
+      <h>84</h>
     </coordinates>
     <panel_attributes/>
     <additional_attributes/>
@@ -295,10 +295,10 @@ BookingVM : ObservableCollection&lt;BookingViewModel&gt;()</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1197</x>
-      <y>495</y>
-      <w>27</w>
-      <h>63</h>
+      <x>798</x>
+      <y>414</y>
+      <w>18</w>
+      <h>42</h>
     </coordinates>
     <panel_attributes>lt=.</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;50.0</additional_attributes>
@@ -306,10 +306,10 @@ BookingVM : ObservableCollection&lt;BookingViewModel&gt;()</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>882</x>
-      <y>378</y>
-      <w>333</w>
-      <h>36</h>
+      <x>588</x>
+      <y>336</y>
+      <w>222</w>
+      <h>24</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;-
 &lt;&lt;constructor&gt;&gt; BookingRepository BookingRepo</panel_attributes>
@@ -318,10 +318,10 @@ BookingVM : ObservableCollection&lt;BookingViewModel&gt;()</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>882</x>
-      <y>432</y>
-      <w>324</w>
-      <h>36</h>
+      <x>588</x>
+      <y>372</y>
+      <w>216</w>
+      <h>24</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;.
 BookingRepo</panel_attributes>
@@ -330,10 +330,10 @@ BookingRepo</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1206</x>
-      <y>459</y>
-      <w>162</w>
-      <h>27</h>
+      <x>804</x>
+      <y>390</y>
+      <w>108</w>
+      <h>18</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;.</panel_attributes>
     <additional_attributes>10.0;10.0;160.0;10.0</additional_attributes>
@@ -341,10 +341,10 @@ BookingRepo</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1350</x>
-      <y>459</y>
-      <w>216</w>
-      <h>27</h>
+      <x>900</x>
+      <y>390</y>
+      <w>144</w>
+      <h>18</h>
     </coordinates>
     <panel_attributes>&lt;&lt;persistence&gt;&gt; Pr38_TheMovies.CSV</panel_attributes>
     <additional_attributes/>
@@ -352,10 +352,10 @@ BookingRepo</panel_attributes>
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>486</x>
-      <y>54</y>
-      <w>351</w>
-      <h>162</h>
+      <x>324</x>
+      <y>120</y>
+      <w>234</w>
+      <h>108</h>
     </coordinates>
     <panel_attributes>MainViewModel calls BookingViewModel to construct the
 ObservableCollection, which is sent to View layer.
@@ -366,5 +366,16 @@ persistence.
 MainView is databound with MainViewModel. What is the
 notation for this?</panel_attributes>
     <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>588</x>
+      <y>348</y>
+      <w>222</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>InitializeRepository()</panel_attributes>
+    <additional_attributes>350.0;20.0;10.0;20.0</additional_attributes>
   </element>
 </diagram>
