@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace TheMovies.Models
 {
-    class CustomerInformation
+    public class CustomerInformation
     {
+        private string email {  get; set; }
+        private string phoneNumber {  get; set; }
     }
 }
