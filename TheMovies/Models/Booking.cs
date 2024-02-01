@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace TheMovies.Models
 {
-    class Booking
+    public class Booking
     {
+        private Location location {  get; set; }
+        private Movie movie { get; set; }
+        private Playtime playtime { get; set; }
+        private CustomerInformation customerInformation { get; set; }
     }
 }

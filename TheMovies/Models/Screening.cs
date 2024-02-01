@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace TheMovies.Models
 {
-    class Playtime
+    public class Screening
     {
+        private DateTime screeningDate { get; set; }
     }
 }
