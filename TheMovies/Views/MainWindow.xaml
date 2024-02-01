@@ -7,6 +7,9 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
+        <ListBox d:ItemsSource="{d:SampleData ItemCount=5}" Width="400" Height="400" Margin="0,0,400,0"/>
+        <Button Content="Tilføj Booking" HorizontalAlignment="Left" Margin="479,348,0,0" VerticalAlignment="Top" Height="46" Width="93" Click="Button_Click"/>
+        <Button Content="Slet Booking" HorizontalAlignment="Left" Margin="657,348,0,0" VerticalAlignment="Top" Height="46" Width="93"/>
 
     </Grid>
 </Window>

@@ -1,29 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web;
 
 namespace TheMovies.Models
 {
-    class Location
+    public class Location
     {
-        private string _cinema;
-        private string _city;
 
-        public string Cinema
-        {
-            get { return _cinema; }
-            set { this._cinema = value; }
-        }
-        public string City
-        {
-            get { return _city; }
-            set { this._city = value; }
-        }
-        public override string ToString()
-        {
-            return base.ToString();
-        }
-    }
+        private string cinema {  get; set; }
+        private string city { get; set; }
+	}
 }
