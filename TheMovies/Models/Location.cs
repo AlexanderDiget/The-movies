@@ -10,6 +10,7 @@ namespace TheMovies.Models
 {
     public class Location
     {
+
         private string cinema {  get; set; }
         private string city { get; set; }
 	}
