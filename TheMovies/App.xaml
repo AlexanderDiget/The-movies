@@ -4,8 +4,6 @@
              xmlns:local="clr-namespace:TheMovies"
              StartupUri="Views/MainWindow.xaml">
     <Application.Resources>
-         
+
     </Application.Resources>
 </Application>
-\\mac\home\desktop\git\the-movies\themovies\app.xaml.cs
-\\mac\home\desktop\git\the-movies\themovies\app.xaml
