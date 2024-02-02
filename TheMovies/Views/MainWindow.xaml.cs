@@ -22,7 +22,7 @@ namespace TheMovies
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void AddBookingClick(object sender, RoutedEventArgs e)
         {
             AddMenu addMenu = new AddMenu();
             addMenu.Top = this.Top;
