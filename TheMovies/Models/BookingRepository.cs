@@ -71,6 +71,33 @@ namespace TheMovies.Models
             return _bookings;
         }
 
+        public Booking Get(string phone) 
+        {
+            Booking result = null;
+
+            foreach (var booking in _bookings)
+            {
+                if(booking.PhoneNumber == phone)
+                {
+                    result = booking;
+                    break;
+                }
+            }
+            return result;
+        }
+        public void Remove(string telephone)
+        {
+            Booking foundBooking = this.Get(telephone);
+
+            if (foundBooking != null)
+            {
+                _bookings.Remove(foundBooking);
+
+            }
+            else
+                throw (new ArgumentException("Booking with phonenumber" + telephone + "not found"));
+        }
+
         //private void Add(string cinema, string city)
         //{
         //    Booking booking = null;
