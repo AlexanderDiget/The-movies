@@ -16,7 +16,7 @@ namespace TheMovies.ViewModels
         private DateTime _screeningDate;
         private string _title;
         private string _genre;
-        private int _duration;
+        private string _duration;
         private string _director;
         private DateTime _premiereDate;
         private string _email;
@@ -47,7 +47,7 @@ namespace TheMovies.ViewModels
             get { return _genre; }
             set { this._genre = value; }
         }
-        public int Duration
+        public string Duration
         {
             get { return _duration; }
             set { this._duration = value; }
