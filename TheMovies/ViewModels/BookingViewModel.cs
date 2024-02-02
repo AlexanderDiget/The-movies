@@ -13,12 +13,12 @@ namespace TheMovies.ViewModels
         private Booking booking;
         private string _cinema;
         private string _city;
-        private DateTime _screeningDate;
+        private string _screeningDate;
         private string _title;
         private string _genre;
         private string _duration;
         private string _director;
-        private DateTime _premiereDate;
+        private string _premiereDate;
         private string _email;
         private string _phoneNumber;
 
@@ -32,7 +32,7 @@ namespace TheMovies.ViewModels
             get { return _city; }
             set { this._city = value; }
         }
-        public DateTime ScreeningDate
+        public string ScreeningDate
         {
             get { return _screeningDate; }
             set { this._screeningDate = value; }
@@ -57,7 +57,7 @@ namespace TheMovies.ViewModels
             get { return _director; }
             set { this._director = value; }
         }
-        public DateTime PremiereDate
+        public string PremiereDate
         {
             get { return _premiereDate; }
             set { this._premiereDate = value; }
@@ -75,16 +75,20 @@ namespace TheMovies.ViewModels
         public BookingViewModel(Booking booking)
         {
             this.booking = booking;
-            _cinema = booking.Cinema;
-            _city = booking.City;
-            _screeningDate = booking.ScreeningDate;
-            _title = booking.Title;
-            _genre = booking.Genre;
-            _duration = booking.Duration;
-            _director = booking.Director;
-            _premiereDate = booking.PremiereDate;
-            _email = booking.Email;
-            _phoneNumber = booking.PhoneNumber;
+            this._cinema = booking.Cinema;
+            this._city = booking.City;
+            this._screeningDate = booking.ScreeningDate;
+            this._title = booking.Title;
+            this._genre = booking.Genre;
+            this._duration = booking.Duration;
+            this._director = booking.Director;
+            this._premiereDate = booking.PremiereDate;
+            this._email = booking.Email;
+            this._phoneNumber = booking.PhoneNumber;
+        }
+        public override string ToString()
+        {
+            return $"{Cinema}, {City} - {ScreeningDate} - {Title}, {Genre}, {Duration}, {Director}, {PremiereDate} - {Email}, {PhoneNumber}";
         }
     }
 }
