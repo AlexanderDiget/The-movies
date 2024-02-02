@@ -17,7 +17,10 @@ namespace TheMovies.ViewModels
         {
             BookingsVM = new ObservableCollection<BookingViewModel>();
 
-            foreach (var booking in bookingRepo.)
+            foreach (var booking in bookingRepo.GetAll())
+            {
+                BookingsVM.Add(new BookingViewModel(booking));
+            }
         }
     }
 }

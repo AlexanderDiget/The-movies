@@ -8,6 +8,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using TheMovies.ViewModels;
 using TheMovies.Views;
 
 namespace TheMovies
@@ -17,9 +18,11 @@ namespace TheMovies
     /// </summary>
     public partial class MainWindow : Window
     {
+        MainViewModel mvm = new MainViewModel();
         public MainWindow()
         {
             InitializeComponent();
+            DataContext = mvm;
         }
 
         private void AddBookingClick(object sender, RoutedEventArgs e)
