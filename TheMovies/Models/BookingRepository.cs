@@ -51,6 +51,11 @@ namespace TheMovies.Models
             return booking;
         }
 
+        public List<Booking> GetAll()
+        {
+            return _bookings;
+        }
+
         //private void Add(string cinema, string city)
         //{
         //    Booking booking = null;
