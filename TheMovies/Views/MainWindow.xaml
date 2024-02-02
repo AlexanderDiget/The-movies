@@ -9,7 +9,7 @@
     <Grid>
         <ListBox ItemsSource="{Binding BookingsVM, UpdateSourceTrigger=PropertyChanged}" Width="790" Height="400" Margin="0,0,400,0"/>
         <Button Content="Tilføj Booking" HorizontalAlignment="Left" Margin="482,348,0,0" VerticalAlignment="Top" Height="46" Width="93" Click="AddBookingClick"/>
-        <Button Content="Slet Booking" HorizontalAlignment="Left" Margin="657,348,0,0" VerticalAlignment="Top" Height="46" Width="93"/>
+        <Button Content="Slet Booking" Command ="{Binding DeleteCommand}" CommandParameter="{Binding}" HorizontalAlignment="Left" Margin="657,348,0,0" VerticalAlignment="Top" Height="46" Width="93"/>
 
     </Grid>
 </Window>
