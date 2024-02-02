@@ -27,7 +27,7 @@ namespace TheMovies.Models
                         string[] lineParts = line.Split(';');
 
                         // 0cinema; 1city; 2screeningDate; 3title; 4genre; 5duration; 6director; 7premiereDate; 8email; 9phoneNumber
-                        this.Add(lineParts[0], lineParts[1], DateTime.Parse(lineParts[2]), lineParts[3], lineParts[4], lineParts[5], lineParts[6], DateTime.Parse(lineParts[7]), lineParts[8], lineParts[9]);
+                        this.Add(lineParts[0], lineParts[1], DateTime.Parse(lineParts[2]), lineParts[3], lineParts[4], int.Parse(lineParts[5]), lineParts[6], DateTime.Parse(lineParts[7]), lineParts[8], lineParts[9]);
                         line = sr.ReadLine();
                     }
                 }
