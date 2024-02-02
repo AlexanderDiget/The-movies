@@ -17,16 +17,16 @@
         <Label Content="Premeredato:" HorizontalAlignment="Left" Margin="81,300,0,0" VerticalAlignment="Top"/>
         <Label Content="Booking E-mail:" HorizontalAlignment="Left" Margin="81,340,0,0" VerticalAlignment="Top"/>
         <Label Content="Booking Telefon nr:" HorizontalAlignment="Left" Margin="81,380,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name ="bioBox" HorizontalAlignment="Left" Margin="222,24,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="340"/>
-        <TextBox x:Name ="byBox"  HorizontalAlignment="Left" Margin="222,64,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="340"/>
-        <TextBox x:Name ="tidspunktBox" HorizontalAlignment="Left" Margin="222,104,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="340"/>
+        <TextBox x:Name ="cinBox" HorizontalAlignment="Left" Margin="222,24,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="340"/>
+        <TextBox x:Name ="citBox"  HorizontalAlignment="Left" Margin="222,64,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="340"/>
+        <TextBox x:Name ="timeBox" HorizontalAlignment="Left" Margin="222,104,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="340"/>
         <TextBox x:Name ="titelBox" HorizontalAlignment="Left" Margin="222,144,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="340"/>
         <TextBox x:Name ="genreBox" HorizontalAlignment="Left" Margin="222,184,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="340"/>
-        <TextBox x:Name ="varighedBox" HorizontalAlignment="Left" Margin="222,224,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="340"/>
-        <TextBox x:Name ="instruktørBox" HorizontalAlignment="Left" Margin="222,264,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="340"/>
-        <TextBox x:Name ="datoBox" HorizontalAlignment="Left" Margin="222,304,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="340"/>
+        <TextBox x:Name ="durationBox" HorizontalAlignment="Left" Margin="222,224,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="340"/>
+        <TextBox x:Name ="directorBox" HorizontalAlignment="Left" Margin="222,264,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="340"/>
+        <TextBox x:Name ="dateBox" HorizontalAlignment="Left" Margin="222,304,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="340"/>
         <TextBox x:Name ="emailBox" HorizontalAlignment="Left" Margin="222,344,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="340"/>
-        <TextBox x:Name ="telefonBox" HorizontalAlignment="Left" Margin="222,384,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="340"/>
+        <TextBox x:Name ="phoneBox" HorizontalAlignment="Left" Margin="222,384,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="340"/>
 
     </Grid>
 </Window>
