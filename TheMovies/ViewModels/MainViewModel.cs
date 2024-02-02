@@ -11,13 +11,22 @@ namespace TheMovies.ViewModels
     public class MainViewModel
     {
         private BookingRepository bookingRepo = new BookingRepository();
-        private ObservableCollection<BookingViewModel> BookingsVM {  get; set; }
-
+        //public ObservableCollection<BookingViewModel> BookingsVM {  get; set; }
+        private ObservableCollection<BookingViewModel> _bookingsVM = new ObservableCollection<BookingViewModel>();
+        public ObservableCollection<BookingViewModel> BookingsVM
+        {
+            get { return _bookingsVM; }
+            set
+            {
+                if(_bookingsVM != value)
+                    _bookingsVM = value;
+            }
+        }
         public MainViewModel() 
         {
             BookingsVM = new ObservableCollection<BookingViewModel>();
 
-            foreach (var booking in bookingRepo.GetAll())
+            foreach (Booking booking in bookingRepo.GetAll())
             {
                 BookingsVM.Add(new BookingViewModel(booking));
             }

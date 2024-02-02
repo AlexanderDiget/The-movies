@@ -5,9 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TheMovies"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="1280" WindowStartupLocation="CenterScreen">
     <Grid>
-        <ListBox d:ItemsSource="{Binding BookingsVM, UpdateSourceTrigger=PropertyChanged}" Width="400" Height="400" Margin="0,0,400,0"/>
+        <ListBox ItemsSource="{Binding BookingsVM, UpdateSourceTrigger=PropertyChanged}" Width="790" Height="400" Margin="0,0,400,0"/>
         <Button Content="Tilføj Booking" HorizontalAlignment="Left" Margin="482,348,0,0" VerticalAlignment="Top" Height="46" Width="93" Click="AddBookingClick"/>
         <Button Content="Slet Booking" HorizontalAlignment="Left" Margin="657,348,0,0" VerticalAlignment="Top" Height="46" Width="93"/>
 
