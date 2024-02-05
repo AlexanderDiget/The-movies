@@ -14,29 +14,33 @@ namespace TheMovies.ViewModels
     public class MainViewModel : INotifyPropertyChanged
     {
         private BookingRepository bookingRepo = new BookingRepository();
-        //public ObservableCollection<BookingViewModel> BookingsVM {  get; set; }
-        private ObservableCollection<BookingViewModel> _bookingsVM = new ObservableCollection<BookingViewModel>();
-        public ObservableCollection<BookingViewModel> BookingsVM
-        {
-            get { return _bookingsVM; }
-            set
-            {
-                if(_bookingsVM != value)
-                    _bookingsVM = value;
-            }
-        }
+        public ObservableCollection<BookingViewModel> BookingsVM {  get; set; } = new ObservableCollection<BookingViewModel>();
+        //private ObservableCollection<BookingViewModel> _bookingsVM = new ObservableCollection<BookingViewModel>();
+        //public ObservableCollection<BookingViewModel> BookingsVM
+        //{
+        //    get { return _bookingsVM; }
+        //    set
+        //    {
+        //        if(_bookingsVM != value)
+        //            _bookingsVM = value;
+        //    }
+        //}
         public MainViewModel() 
         {
-            BookingsVM = new ObservableCollection<BookingViewModel>();
-
+           
             foreach (Booking booking in bookingRepo.GetAll())
             {
                 BookingsVM.Add(new BookingViewModel(booking));
             }
 
-           DeleteCommand = new DeleteCommand(bookingRepo);
+           DeleteCommand = new DeleteCommand(BookingRepository);
         }
 
+        public BookingRepository BookingRepository
+        {
+            get { return bookingRepo; }
+            set { bookingRepo = value; }
+        }
         private BookingViewModel _selectedBooking;
 
         public BookingViewModel SelectedBooking
@@ -60,14 +64,14 @@ namespace TheMovies.ViewModels
 
         }
 
-        public void DeleteSelectedBooking()
-        {
-            if (_selectedBooking != null)
-            {
-                SelectedBooking.DeleteBooking(bookingRepo);
-                BookingsVM.Remove(SelectedBooking);
-            }
-        }
+        //public void DeleteSelectedBooking()
+        //{
+        //    if (_selectedBooking != null)
+        //    {
+        //        SelectedBooking.DeleteBooking(bookingRepo);
+        //        BookingsVM.Remove(SelectedBooking);
+        //    }
+        //}
 
         public ICommand DeleteCommand { get; }
     }

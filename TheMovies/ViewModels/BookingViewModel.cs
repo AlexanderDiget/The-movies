@@ -91,9 +91,9 @@ namespace TheMovies.ViewModels
             return $"{Cinema}, {City} - {ScreeningDate} - {Title}, {Genre}, {Duration}, {Director}, {PremiereDate} - {Email}, {PhoneNumber}";
         }
 
-        public void DeleteBooking(BookingRepository bookingRepo)
-        {
-            bookingRepo.Remove(PhoneNumber);
-        }
+        //public void DeleteBooking(BookingRepository bookingRepo)
+        //{
+        //    bookingRepo.Remove(PhoneNumber);
+        //}
     }
 }
