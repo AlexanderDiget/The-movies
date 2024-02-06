@@ -45,7 +45,23 @@ namespace TheMovies.Models
             }
         }
 
-        private Booking Add(string cinema, string city, string screeningDate, string title, string genre, string duration, string director, string premiereDate, string email, string phoneNumber)
+        public void Writer(string cinema, string city, string screeningDate, string title, string genre, string duration, string director, string premiereDate, string email, string phoneNumber)
+        {
+            try
+            {
+                string data = $"{cinema},{city},{screeningDate},{title},{genre},{duration},{director},{premiereDate},{email},{phoneNumber}";
+                using (StreamWriter sw = new StreamWriter("Pr38_TheMovies.CSV", true))
+                {
+                    sw.WriteLine($"\n{data}");
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message); 
+            }
+        }
+
+        public Booking Add(string cinema, string city, string screeningDate, string title, string genre, string duration, string director, string premiereDate, string email, string phoneNumber)
         {
             Booking booking = null;
             if (!string.IsNullOrEmpty(cinema) && !string.IsNullOrEmpty(city) && !string.IsNullOrEmpty(title) && !string.IsNullOrEmpty(genre) && !string.IsNullOrEmpty(duration) && !string.IsNullOrEmpty(email) && !string.IsNullOrEmpty(phoneNumber))

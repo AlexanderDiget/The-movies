@@ -1,15 +1,21 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.IO;
 using System.Linq;
 using System.Security.RightsManagement;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using TheMovies.Models;
 
 namespace TheMovies.ViewModels
 {
     public class BookingViewModel
     {
+        private BookingRepository bookingRepository = new BookingRepository();
+        public ObservableCollection<Booking> bookingsVM { get; set; } = new ObservableCollection<Booking>();
+
         private Booking booking;
         private string _cinema;
         private string _city;
@@ -72,6 +78,15 @@ namespace TheMovies.ViewModels
             get { return _phoneNumber; }
             set { this._phoneNumber = value; }
         }
+
+        //private string _addMessage;
+
+        //public string AddMessage
+        //{
+        //    get { return _addMessage; }
+        //    set { _addMessage = value; }
+        //}
+
         public BookingViewModel(Booking booking)
         {
             this.booking = booking;
@@ -90,10 +105,13 @@ namespace TheMovies.ViewModels
         {
             return $"{Cinema}, {City} - {ScreeningDate} - {Title}, {Genre}, {Duration}, {Director}, {PremiereDate} - {Email}, {PhoneNumber}";
         }
-
-        //public void DeleteBooking(BookingRepository bookingRepo)
+        //public string GetBooking()
         //{
-        //    bookingRepo.Remove(PhoneNumber);
+            
+        //    BookingRepository.Add(_cinema, _city, _screeningDate, _title, _genre, _duration, _director, _premiereDate, _email, _phoneNumber)
+        //    bookingsVM.Add(BookingRepository.Get(PhoneNumber));
         //}
+
+
     }
 }

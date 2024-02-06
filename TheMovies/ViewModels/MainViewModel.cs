@@ -15,16 +15,7 @@ namespace TheMovies.ViewModels
     {
         private BookingRepository bookingRepo = new BookingRepository();
         public ObservableCollection<BookingViewModel> BookingsVM {  get; set; } = new ObservableCollection<BookingViewModel>();
-        //private ObservableCollection<BookingViewModel> _bookingsVM = new ObservableCollection<BookingViewModel>();
-        //public ObservableCollection<BookingViewModel> BookingsVM
-        //{
-        //    get { return _bookingsVM; }
-        //    set
-        //    {
-        //        if(_bookingsVM != value)
-        //            _bookingsVM = value;
-        //    }
-        //}
+       
         public MainViewModel() 
         {
            
@@ -74,5 +65,7 @@ namespace TheMovies.ViewModels
         //}
 
         public ICommand DeleteCommand { get; }
+
+        
     }
 }
