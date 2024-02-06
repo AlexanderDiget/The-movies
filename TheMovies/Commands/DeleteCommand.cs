@@ -41,12 +41,9 @@ namespace TheMovies.Commands
         public void Execute(object? parameter)
         {
             if (parameter is MainViewModel mvm)
-            {
-
+            { 
                 mvm.BookingRepository.Remove(mvm.SelectedBooking.PhoneNumber);
                 mvm.BookingsVM.Remove(mvm.SelectedBooking);
-                
-
             }
         }
     }
