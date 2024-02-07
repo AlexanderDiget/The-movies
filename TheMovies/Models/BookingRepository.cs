@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.IO;
+using System.Globalization;
 
 namespace TheMovies.Models
 {
@@ -27,7 +28,7 @@ namespace TheMovies.Models
                         string[] lineParts = line.Split(';');
 
                         // 0cinema; 1city; 2screeningDate; 3title; 4genre; 5duration; 6director; 7premiereDate; 8email; 9phoneNumber
-                        this.Add(lineParts[0], lineParts[1], DateTime.Parse(lineParts[2]), lineParts[3], lineParts[4], int.Parse(lineParts[5]), lineParts[6], DateTime.Parse(lineParts[7]), lineParts[8], lineParts[9]);
+                        this.Add(lineParts[0], lineParts[1], lineParts[2], lineParts[3], lineParts[4], lineParts[5], lineParts[6], lineParts[7], lineParts[8], lineParts[9]);
                         line = sr.ReadLine();
                     }
                 }
@@ -38,17 +39,63 @@ namespace TheMovies.Models
             }
         }
 
-        private Booking Add(string cinema, string city, DateTime screeningDate, string title, string genre, int duration, string director, DateTime premiereDate, string email, string phoneNumber)
+        private Booking Add(string cinema, string city, string screeningDate, string title, string genre, string duration, string director, string premiereDate, string email, string phoneNumber)
         {
             Booking booking = null;
-            if (!string.IsNullOrEmpty(cinema) && !string.IsNullOrEmpty(city) && !string.IsNullOrEmpty(title) && !string.IsNullOrEmpty(genre) && duration < 0 && !string.IsNullOrEmpty(email) && !string.IsNullOrEmpty(phoneNumber))
+            if (!string.IsNullOrEmpty(cinema) && !string.IsNullOrEmpty(city) && !string.IsNullOrEmpty(title) && !string.IsNullOrEmpty(genre) && !string.IsNullOrEmpty(duration) && !string.IsNullOrEmpty(email) && !string.IsNullOrEmpty(phoneNumber))
             {
-                booking = new Booking() { Cinema = cinema, City = city, ScreeningDate = screeningDate, Title = title, Genre = genre, Duration = duration, Director = director, PremiereDate = premiereDate, Email = email, PhoneNumber = phoneNumber };
+                booking = new Booking()
+                {
+                    Cinema = cinema,
+                    City = city,
+                    ScreeningDate = screeningDate,
+                    Title = title,
+                    Genre = genre,
+                    Duration = duration,
+                    Director = director,
+                    PremiereDate = premiereDate,
+                    Email = email,
+                    PhoneNumber = phoneNumber
+                };
                 _bookings.Add(booking);
             }
             else
+            {
                 throw new ArgumentException("Not all arguments are valid");
+            }
             return booking;
+        }
+
+        public List<Booking> GetAll()
+        {
+            return _bookings;
+        }
+
+        public Booking Get(string phone) 
+        {
+            Booking result = null;
+
+            foreach (var booking in _bookings)
+            {
+                if(booking.PhoneNumber == phone)
+                {
+                    result = booking;
+                    break;
+                }
+            }
+            return result;
+        }
+        public void Remove(string telephone)
+        {
+            Booking foundBooking = this.Get(telephone);
+
+            if (foundBooking != null)
+            {
+                _bookings.Remove(foundBooking);
+
+            }
+            else
+                throw (new ArgumentException("Booking with phonenumber" + telephone + "not found"));
         }
 
         //private void Add(string cinema, string city)
