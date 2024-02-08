@@ -27,6 +27,8 @@
         <TextBox x:Name ="dateBox" HorizontalAlignment="Left" Margin="222,304,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="340"/>
         <TextBox x:Name ="emailBox" HorizontalAlignment="Left" Margin="222,344,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="340"/>
         <TextBox x:Name ="phoneBox" HorizontalAlignment="Left" Margin="222,384,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="340"/>
+        <Button x:Name="exitBut" Content="Exit" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="23" Width="30" IsCancel="True" Click="ExitButton"/>
+        <Button Content="Tilføj" IsDefault="True" HorizontalAlignment="Left" Margin="641,374,0,0" VerticalAlignment="Top" Height="38" Width="101"/>
 
     </Grid>
 </Window>

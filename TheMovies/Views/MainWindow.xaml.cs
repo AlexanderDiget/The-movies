@@ -33,5 +33,7 @@ namespace TheMovies
             addMenu.Show();
             this.Close();
         }
+
+        
     }
 }

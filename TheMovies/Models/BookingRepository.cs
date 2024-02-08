@@ -5,12 +5,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO;
 using System.Globalization;
+using System.Windows;
 
 namespace TheMovies.Models
 {
     public class BookingRepository
     {
         private List<Booking> _bookings = new List<Booking>();
+        
 
         public BookingRepository()
         {
@@ -27,8 +29,12 @@ namespace TheMovies.Models
                     {
                         string[] lineParts = line.Split(';');
 
-                        // 0cinema; 1city; 2screeningDate; 3title; 4genre; 5duration; 6director; 7premiereDate; 8email; 9phoneNumber
-                        this.Add(lineParts[0], lineParts[1], lineParts[2], lineParts[3], lineParts[4], lineParts[5], lineParts[6], lineParts[7], lineParts[8], lineParts[9]);
+                        if (lineParts.Length >= 10)
+                        {
+                            // 0cinema; 1city; 2screeningDate; 3title; 4genre; 5duration; 6director; 7premiereDate; 8email; 9phoneNumber
+                            this.Add(lineParts[0], lineParts[1], lineParts[2], lineParts[3], lineParts[4], lineParts[5], lineParts[6], lineParts[7], lineParts[8], lineParts[9]);
+                        }
+                           
                         line = sr.ReadLine();
                     }
                 }
@@ -39,12 +45,28 @@ namespace TheMovies.Models
             }
         }
 
-        private Booking Add(string cinema, string city, string screeningDate, string title, string genre, string duration, string director, string premiereDate, string email, string phoneNumber)
+        public void Writer(string cinema, string city, string screeningDate, string title, string genre, string duration, string director, string premiereDate, string email, string phoneNumber)
+        {
+            try
+            {
+                string data = $"{cinema},{city},{screeningDate},{title},{genre},{duration},{director},{premiereDate},{email},{phoneNumber}";
+                using (StreamWriter sw = new StreamWriter("Pr38_TheMovies.CSV", true))
+                {
+                    sw.WriteLine($"\n{data}");
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message); 
+            }
+        }
+
+        public Booking Add(string cinema, string city, string screeningDate, string title, string genre, string duration, string director, string premiereDate, string email, string phoneNumber)
         {
             Booking booking = null;
             if (!string.IsNullOrEmpty(cinema) && !string.IsNullOrEmpty(city) && !string.IsNullOrEmpty(title) && !string.IsNullOrEmpty(genre) && !string.IsNullOrEmpty(duration) && !string.IsNullOrEmpty(email) && !string.IsNullOrEmpty(phoneNumber))
             {
-                booking = new Booking()
+                booking = new Booking(cinema, city, screeningDate, title, genre, duration, director, premiereDate, email, phoneNumber)
                 {
                     Cinema = cinema,
                     City = city,
@@ -85,18 +107,36 @@ namespace TheMovies.Models
             }
             return result;
         }
-        public void Remove(string telephone)
+        public void Remove(string phoneNumber)
         {
-            Booking foundBooking = this.Get(telephone);
+            Booking foundBooking = this.Get(phoneNumber);
 
             if (foundBooking != null)
             {
                 _bookings.Remove(foundBooking);
-
+               //UpdateFile();
             }
             else
-                throw (new ArgumentException("Booking with phonenumber" + telephone + "not found"));
+                throw (new ArgumentException("Booking with phonenumber" + phoneNumber + "not found"));
         }
+
+        //private void UpdateFile()
+        //{
+        //    try
+        //    {
+        //        using (StreamWriter sw = new StreamWriter("Pr38_TheMovies.CSV", false)) // Overwrite the existing file
+        //        {
+        //            foreach (var b in _bookings)
+        //            { 
+        //                sw.WriteLine($"{b.Cinema},{b.City},{b.ScreeningDate},{b.Title},{b.Genre},{b.Duration},{b.Director}, {b.PremiereDate}, {b.Email}, {b.PhoneNumber}");
+        //            }
+        //        }
+        //    }
+        //    catch (IOException)
+        //    {
+        //        throw;
+        //    }
+        //}
 
         //private void Add(string cinema, string city)
         //{

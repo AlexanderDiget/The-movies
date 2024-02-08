@@ -11,11 +11,11 @@ namespace TheMovies.Commands
 {
     public class DeleteCommand : ICommand
     {
-        private BookingRepository bookingRepository;
+        private BookingRepository _bookingRepository;
 
-        public DeleteCommand(BookingRepository bookingRepository)
+        public DeleteCommand(BookingRepository _bookingRepository)
         {
-            this.bookingRepository = bookingRepository;
+            this._bookingRepository = _bookingRepository;
         }
 
         public event EventHandler? CanExecuteChanged
@@ -26,23 +26,24 @@ namespace TheMovies.Commands
 
         public bool CanExecute(object? parameter)
         {
-            if (parameter is MainViewModel mivm)
+            if (parameter is MainViewModel mvm)
             {
-                if (mivm.SelectedBooking != null)
+                if (mvm.SelectedBooking != null)
                 {
                     return true;
                 }
             }
             return false;
+
+            
         }
 
         public void Execute(object? parameter)
         {
-            if (parameter is MainViewModel mivm)
-            {
-
-                mivm.DeleteSelectedBooking();
-
+            if (parameter is MainViewModel mvm)
+            { 
+                mvm.BookingRepository.Remove(mvm.SelectedBooking.PhoneNumber);
+                mvm.BookingsVM.Remove(mvm.SelectedBooking);
             }
         }
     }
