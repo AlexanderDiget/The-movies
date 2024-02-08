@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.1">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>500</x>
+      <y>260</y>
+      <w>230</w>
+      <h>250</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;table&gt;&gt;
+BOOKING
+--
+&lt;&lt;PK&gt;&gt;&lt;&lt;surrogate&gt;&gt;BookingId : Int
+Cinema : NVarChar(100)
+ScreeningDate : NVarChar(100)
+Title : NVarChar(100)
+Genre : NVarChar(100)
+Duration : NVarChar(100)
+Director : NVarChar(100)
+PremiereDate : NVarChar(100)
+Email : NVarChar(100)
+PhoneNumber : NVarChar(100)
+--
+&lt;&lt;PK&gt;&gt; PK_Booking()
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
