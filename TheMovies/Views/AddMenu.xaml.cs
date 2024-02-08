@@ -23,5 +23,14 @@ namespace TheMovies.Views
         {
             InitializeComponent();
         }
+
+        private void ExitButton(object sender, RoutedEventArgs e)
+        {
+            MainWindow main = new MainWindow();
+            main.Show();
+            main.Left = this.Left; 
+            main.Top = this.Top;
+            this.Close();
+        }
     }
 }
