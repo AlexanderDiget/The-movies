@@ -38,7 +38,6 @@ namespace TheMovies.Models
                 throw;
             }
         }
-
         private Booking Add(string cinema, string city, string screeningDate, string title, string genre, string duration, string director, string premiereDate, string email, string phoneNumber)
         {
             Booking booking = null;
@@ -49,11 +48,6 @@ namespace TheMovies.Models
                     Cinema = cinema,
                     City = city,
                     ScreeningDate = screeningDate,
-                    Title = title,
-                    Genre = genre,
-                    Duration = duration,
-                    Director = director,
-                    PremiereDate = premiereDate,
                     Email = email,
                     PhoneNumber = phoneNumber
                 };
@@ -70,34 +64,5 @@ namespace TheMovies.Models
         {
             return _bookings;
         }
-
-        //private void Add(string cinema, string city)
-        //{
-        //    Booking booking = null;
-        //    Location location = null;
-        //    if (!string.IsNullOrEmpty(cinema) && !string.IsNullOrEmpty(city))
-        //    {
-        //        booking = new Booking();
-        //        location = new Location() { Cinema = cinema, City = city };
-        //        booking.Location = location;
-
-        //        _bookings.Add(booking);
-        //    }
-        //    else
-        //        throw new ArgumentException("Incorrect location values");
-        //    //return location;
-        //}
-        //private void Add(DateTime dateTime)
-        //{
-        //    Booking booking = null;
-        //    Screening _screening = null;
-        //    if (dateTime != null)
-        //    {
-        //        booking = new Booking();
-        //        _screening = new Screening() { DateTime = dateTime };
-        //    }
-        //    else
-        //        throw new ArgumentException("This line will never run");
-        //}
     }
 }

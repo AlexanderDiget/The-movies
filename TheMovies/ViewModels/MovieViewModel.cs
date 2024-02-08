@@ -52,6 +52,5 @@ namespace TheMovies.ViewModels
         {
             return $"{Title}, {Genre} - {DurationInMinutes} - {Director}, {PremiereDate}";
         }
-
     }
 }

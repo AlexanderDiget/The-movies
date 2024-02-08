@@ -11,8 +11,9 @@ namespace TheMovies.ViewModels
     public class MainViewModel
     {
         private BookingRepository bookingRepo = new BookingRepository();
-        //public ObservableCollection<BookingViewModel> BookingsVM {  get; set; }
+        private MovieRepository movieRepo = new MovieRepository();
         private ObservableCollection<BookingViewModel> _bookingsVM = new ObservableCollection<BookingViewModel>();
+        private ObservableCollection<MovieViewModel> _movieVM = new ObservableCollection<MovieViewModel>();
         public ObservableCollection<BookingViewModel> BookingsVM
         {
             get { return _bookingsVM; }
@@ -22,13 +23,27 @@ namespace TheMovies.ViewModels
                     _bookingsVM = value;
             }
         }
+        public ObservableCollection<MovieViewModel> MoviesVM
+        {
+            get { return _movieVM; }
+            set
+            {
+                if (_movieVM != value)
+                    _movieVM = value;
+            }
+        }
         public MainViewModel() 
         {
             BookingsVM = new ObservableCollection<BookingViewModel>();
+            MoviesVM = new ObservableCollection<MovieViewModel>();
 
             foreach (Booking booking in bookingRepo.GetAll())
             {
                 BookingsVM.Add(new BookingViewModel(booking));
+            }
+            foreach(Movie movie in movieRepo.GetAll())
+            {
+                MoviesVM.Add(new MovieViewModel(movie));
             }
         }
     }

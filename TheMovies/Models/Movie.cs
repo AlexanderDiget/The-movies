@@ -8,10 +8,10 @@ namespace TheMovies.Models
 {
    public class Movie
     {
-        private string title { get; set; }
-        private string genre { get; set; }
-        private int durationInMinutes { get; set; }
-        private string director { get; set; }
-        private DateTime premiereDate { get; set; }
+        public string Title { get; set; }
+        public string Genre { get; set; }
+        public string DurationInMinutes { get; set; }
+        public string Director { get; set; }
+        public string PremiereDate { get; set; }
     }
 }

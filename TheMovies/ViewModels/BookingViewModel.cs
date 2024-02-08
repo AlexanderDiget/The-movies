@@ -78,17 +78,12 @@ namespace TheMovies.ViewModels
             this._cinema = booking.Cinema;
             this._city = booking.City;
             this._screeningDate = booking.ScreeningDate;
-            this._title = booking.Title;
-            this._genre = booking.Genre;
-            this._duration = booking.Duration;
-            this._director = booking.Director;
-            this._premiereDate = booking.PremiereDate;
             this._email = booking.Email;
             this._phoneNumber = booking.PhoneNumber;
         }
         public override string ToString()
         {
-            return $"{Cinema}, {City} - {ScreeningDate} - {Title}, {Genre}, {Duration}, {Director}, {PremiereDate} - {Email}, {PhoneNumber}";
+            return $"{Cinema}, {City} - {ScreeningDate} - {Email}, {PhoneNumber}";
         }
     }
 }

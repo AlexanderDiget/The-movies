@@ -7,9 +7,10 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="1280" WindowStartupLocation="CenterScreen">
     <Grid>
-        <ListBox ItemsSource="{Binding BookingsVM, UpdateSourceTrigger=PropertyChanged}" Width="790" Height="400" Margin="0,0,400,0"/>
-        <Button Content="Tilføj Booking" HorizontalAlignment="Left" Margin="482,348,0,0" VerticalAlignment="Top" Height="46" Width="93" Click="AddBookingClick"/>
-        <Button Content="Slet Booking" HorizontalAlignment="Left" Margin="657,348,0,0" VerticalAlignment="Top" Height="46" Width="93"/>
+        <ListBox ItemsSource="{Binding BookingsVM, UpdateSourceTrigger=PropertyChanged}" Width="460" Height="400" Margin="0,0,700,0"/>
+        <ListBox ItemsSource="{Binding MoviesVM, UpdateSourceTrigger=PropertyChanged}" Width="460" Height="400" Margin="0,0,-700,0"/>
+        <Button Content="Tilføj Booking" HorizontalAlignment="Left" Margin="525,348,0,0" VerticalAlignment="Top" Height="46" Width="93" Click="AddBookingClick"/>
+        <Button Content="Slet Booking" HorizontalAlignment="Left" Margin="660,348,0,0" VerticalAlignment="Top" Height="46" Width="93"/>
 
     </Grid>
 </Window>
