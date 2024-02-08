@@ -13,7 +13,5 @@ namespace TheMovies.Models
         private int durationInMinutes { get; set; }
         private string director { get; set; }
         private DateTime premiereDate { get; set; }
-
-
     }
 }
