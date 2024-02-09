@@ -4,10 +4,10 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>760</x>
-      <y>368</y>
-      <w>216</w>
-      <h>120</h>
+      <x>752</x>
+      <y>376</y>
+      <w>240</w>
+      <h>136</h>
     </coordinates>
     <panel_attributes>&lt;&lt;table&gt;&gt;
 BOOKING
@@ -16,16 +16,18 @@ BOOKING
 Location : NVarChar(100)
 Movie : NVarChar(100)
 CustomerInformation : NVarChar(100)
+&lt;&lt;FK&gt;&gt; ScreeningTime : DateTime2
 --
 &lt;&lt;PK&gt;&gt; PK_Booking()
+&lt;&lt;FK&gt;&gt; FK_Booking_Screening(ScreeningTime)
 </panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>768</x>
-      <y>8</y>
+      <x>760</x>
+      <y>16</y>
       <w>192</w>
       <h>120</h>
     </coordinates>
@@ -44,8 +46,8 @@ TelephoneNumber : NVarChar(100)
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>688</x>
-      <y>192</y>
+      <x>680</x>
+      <y>200</y>
       <w>360</w>
       <h>120</h>
     </coordinates>
@@ -64,8 +66,8 @@ _&lt;&lt;PK&gt;&gt; &lt;&lt;FK&gt;&gt; BookingId : Int_
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>400</x>
-      <y>352</y>
+      <x>392</x>
+      <y>360</y>
       <w>216</w>
       <h>144</h>
     </coordinates>
@@ -83,8 +85,8 @@ SCREENING
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>400</x>
-      <y>136</y>
+      <x>392</x>
+      <y>144</y>
       <w>216</w>
       <h>144</h>
     </coordinates>
@@ -106,8 +108,8 @@ PremiereDate : NVarChar(100)
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>408</x>
-      <y>568</y>
+      <x>400</x>
+      <y>576</y>
       <w>224</w>
       <h>144</h>
     </coordinates>
@@ -128,8 +130,8 @@ SeatNumber : Int
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>96</x>
-      <y>576</y>
+      <x>88</x>
+      <y>584</y>
       <w>232</w>
       <h>128</h>
     </coordinates>
@@ -148,15 +150,15 @@ CINEMAHALL
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>104</x>
-      <y>368</y>
+      <x>96</x>
+      <y>376</y>
       <w>216</w>
       <h>128</h>
     </coordinates>
     <panel_attributes>&lt;&lt;table&gt;&gt;
 LOCATION
 --
-&lt;&lt;PK&gt;&gt; LocationId : Int
+&lt;&lt;PK&gt;&gt;&lt;&lt;surrogate&gt;&gt; LocationId : Int
 Cinema : NVarChar(100)
 City : NVarChar(100)
 --
@@ -168,8 +170,8 @@ City : NVarChar(100)
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>496</x>
-      <y>272</y>
+      <x>488</x>
+      <y>280</y>
       <w>32</w>
       <h>96</h>
     </coordinates>
@@ -181,8 +183,8 @@ m2=*</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>208</x>
-      <y>488</y>
+      <x>200</x>
+      <y>496</y>
       <w>32</w>
       <h>104</h>
     </coordinates>
@@ -194,8 +196,8 @@ m2=*</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>320</x>
-      <y>640</y>
+      <x>312</x>
+      <y>648</y>
       <w>104</w>
       <h>32</h>
     </coordinates>
@@ -207,21 +209,21 @@ m2=*</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>624</x>
-      <y>480</y>
+      <x>616</x>
+      <y>504</y>
       <w>272</w>
-      <h>200</h>
+      <h>184</h>
     </coordinates>
     <panel_attributes>lt=-
 m1=1
 m2=*</panel_attributes>
-    <additional_attributes>310.0;10.0;310.0;220.0;10.0;220.0</additional_attributes>
+    <additional_attributes>310.0;10.0;310.0;200.0;10.0;200.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>856</x>
-      <y>304</y>
+      <x>848</x>
+      <y>312</y>
       <w>24</w>
       <h>80</h>
     </coordinates>
@@ -233,8 +235,8 @@ m2=*</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>856</x>
-      <y>120</y>
+      <x>848</x>
+      <y>128</y>
       <w>24</w>
       <h>88</h>
     </coordinates>
@@ -246,8 +248,8 @@ m2=*</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>608</x>
-      <y>424</y>
+      <x>600</x>
+      <y>432</y>
       <w>168</w>
       <h>32</h>
     </coordinates>
