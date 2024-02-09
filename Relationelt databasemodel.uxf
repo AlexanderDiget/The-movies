@@ -1,30 +1,259 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <diagram program="umlet" version="15.1">
-  <zoom_level>10</zoom_level>
+  <zoom_level>8</zoom_level>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>500</x>
-      <y>260</y>
-      <w>230</w>
-      <h>250</h>
+      <x>760</x>
+      <y>368</y>
+      <w>216</w>
+      <h>120</h>
     </coordinates>
     <panel_attributes>&lt;&lt;table&gt;&gt;
 BOOKING
 --
 &lt;&lt;PK&gt;&gt;&lt;&lt;surrogate&gt;&gt;BookingId : Int
-Cinema : NVarChar(100)
-ScreeningDate : NVarChar(100)
-Title : NVarChar(100)
-Genre : NVarChar(100)
-Duration : NVarChar(100)
-Director : NVarChar(100)
-PremiereDate : NVarChar(100)
-Email : NVarChar(100)
-PhoneNumber : NVarChar(100)
+Location : NVarChar(100)
+Movie : NVarChar(100)
+CustomerInformation : NVarChar(100)
 --
 &lt;&lt;PK&gt;&gt; PK_Booking()
 </panel_attributes>
     <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>768</x>
+      <y>8</y>
+      <w>192</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;table&gt;&gt;
+CUSTOMERINFORMATION
+--
+&lt;&lt;PK&gt;&gt; EMAIL : NVarChar(100)
+TelephoneNumber : NVarChar(100)
+--
+&lt;&lt;PK&gt;&gt; PK_CustomerInformation()
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>688</x>
+      <y>192</y>
+      <w>360</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;table&gt;&gt;
+CUSTOMERINFORMATION_BOOKING
+--
+_&lt;&lt;PK&gt;&gt; &lt;&lt;FK&gt;&gt; Email : NVarChar(100)_
+_&lt;&lt;PK&gt;&gt; &lt;&lt;FK&gt;&gt; BookingId : Int_
+--
+&lt;&lt;PK&gt;&gt; PK_CustomerInformationBooking()
+&lt;&lt;FK1&gt;&gt; FK_CustomerInformationBooking_CustomerInformation(Email)
+&lt;&lt;FK2&gt;&gt; FK_CustomerInformationBooking_Booking(BookingId)
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>400</x>
+      <y>352</y>
+      <w>216</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;table&gt;&gt;
+SCREENING
+--
+&lt;&lt;PK&gt;&gt; ScreeningTime : DateTime2
+&lt;&lt;FK&gt;&gt; MovieId : Int	
+--
+&lt;&lt;PK&gt;&gt; PK_Screening()
+&lt;&lt;FK&gt;&gt; FK_Screening_Movie(MovieId)
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>400</x>
+      <y>136</y>
+      <w>216</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;table&gt;&gt;
+MOVIE
+--
+&lt;&lt;PK&gt;&gt; &lt;&lt;surrogate&gt;&gt;MovieId : Int
+Title : NVarChar(100)
+Genre : NVarChar(100)
+DurationInMinutes : NVarChar(100)
+Director : NVarChar(100)
+PremiereDate : NVarChar(100)
+--
+&lt;&lt;PK&gt;&gt; PK_Movie()
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>408</x>
+      <y>568</y>
+      <w>224</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;table&gt;&gt;
+SEAT
+--
+&lt;&lt;PK&gt;&gt; &lt;&lt;surrograte&gt;&gt; SeatId : Int
+Row : Int
+SeatNumber : Int
+&lt;&lt;FK&gt;&gt; BookingId : Int
+--
+&lt;&lt;PK&gt;&gt; PK_Movie()
+&lt;&lt;FK&gt;&gt; FK_Movie_Booking(BookingId)
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>96</x>
+      <y>576</y>
+      <w>232</w>
+      <h>128</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;table&gt;&gt;
+CINEMAHALL
+--
+&lt;&lt;PK&gt;&gt; HallNumber : Int
+&lt;&lt;FK&gt;&gt; LocationId : Int
+--
+&lt;&lt;PK&gt;&gt; PK_CinemaHall()
+&lt;&lt;FK&gt;&gt; FK_CinemaHall_Location(LocationId)
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>104</x>
+      <y>368</y>
+      <w>216</w>
+      <h>128</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;table&gt;&gt;
+LOCATION
+--
+&lt;&lt;PK&gt;&gt; LocationId : Int
+Cinema : NVarChar(100)
+City : NVarChar(100)
+--
+&lt;&lt;PK&gt;&gt; PK_Location()
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>496</x>
+      <y>272</y>
+      <w>32</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=*</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>208</x>
+      <y>488</y>
+      <w>32</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=*</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>320</x>
+      <y>640</y>
+      <w>104</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=*</panel_attributes>
+    <additional_attributes>10.0;10.0;110.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>624</x>
+      <y>480</y>
+      <w>272</w>
+      <h>200</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=*</panel_attributes>
+    <additional_attributes>310.0;10.0;310.0;220.0;10.0;220.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>856</x>
+      <y>304</y>
+      <w>24</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=*
+m2=*</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>856</x>
+      <y>120</y>
+      <w>24</w>
+      <h>88</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=*
+m2=*</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>608</x>
+      <y>424</y>
+      <w>168</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=*</panel_attributes>
+    <additional_attributes>10.0;10.0;190.0;10.0</additional_attributes>
   </element>
 </diagram>
